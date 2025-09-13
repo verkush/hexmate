@@ -11,6 +11,14 @@
   "icon": "media/logo.png",
   "activationEvents": ["*"],
   "main": "./out/extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/verkush/hexmate"
+  },
+  "bugs": {
+    "url": "https://github.com/verkush/hexmate/issues"
+  },
+  "homepage": "https://github.com/verkush/hexmate#readme",
   "contributes": {
     "viewsContainers": {
       "activitybar": [
