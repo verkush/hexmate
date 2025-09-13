@@ -1,0 +1,17 @@
+{
+  "hexmate.dualDisplay": true,
+  "hexmate.bitfieldDisplay": true,
+  "hexmate.bitfields": {
+    "StatusRegister": {
+      "0": { "label": "Carry", "doc": "Carry flag" },
+      "1": { "label": "Zero", "doc": "Result is zero" },
+      "2": { "label": "Interrupt", "doc": "Interrupt enabled" },
+      "7": { "label": "Negative", "doc": "Signed negative result" }
+    },
+    "ControlRegister": {
+      "3": "Enable",
+      "4": "Mode0",
+      "5": "Mode1"
+    }
+  }
+}

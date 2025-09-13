@@ -1,0 +1,129 @@
+{
+  "name": "hexmate",
+  "displayName": "HexMate",
+  "description": "A VS Code extension for number conversions, bitfield visualization, and inline annotations.",
+  "version": "0.0.1",
+  "publisher": "bitlogiclab",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": ["onStartupFinished", "onCommand:hexmate.toggleNumberFormat"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "hexmate.toggleNumberFormat",
+        "title": "HexMate: Toggle Number Format",
+        "category": "HexMate"
+      },
+      {
+        "command": "hexmate.bulkReplaceNumbers",
+        "title": "HexMate: Bulk Replace Numbers",
+        "category": "HexMate"
+      },
+      {
+        "command": "hexmate.toggleDecorations",
+        "title": "HexMate: Toggle Decorations",
+        "category": "HexMate"
+      },
+      {
+        "command": "hexmate.openCalculatorFromHover",
+        "title": "HexMate: Open Calculator (from hover)",
+        "category": "HexMate"
+      },
+      {
+        "command": "hexmate.openBitfieldVisualizerFromHover",
+        "title": "HexMate: Open Bitfield Visualizer (from hover)",
+        "category": "HexMate"
+      },
+      {
+        "command": "hexmate.replaceNumber",
+        "title": "HexMate: Replace Number",
+        "category": "HexMate"
+      },
+      {
+        "command": "hexmate.replaceNumberQuick",
+        "title": "HexMate: Replace Number (Quick Pick)",
+        "category": "HexMate"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "hexmate",
+          "title": "HexMate",
+          "icon": "media/hexmate-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "hexmate": [
+        {
+          "id": "hexmateCalculatorView",
+          "name": "Calculator"
+        },
+        {
+          "id": "hexmateBitfieldView",
+          "name": "Bitfield Visualizer"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "HexMate",
+      "properties": {
+        "hexmate.dualDisplay": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show inline dual display (Dec/Hex/Bin/Oct) annotations."
+        },
+        "hexmate.bitfieldDisplay": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show inline bitfield flags if definitions exist."
+        },
+        "hexmate.bitfields": {
+          "type": "object",
+          "default": {},
+          "description": "Bitfield definitions for registers (per project)."
+        },
+        "hexmate.decorationsEnabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable inline number annotations (decorations).",
+          "scope": "resource"
+        },
+        "hexmate.skipContexts": {
+          "type": "array",
+          "default": ["return", "case", "throw", "goto"],
+          "description": "Keywords before numbers that should not be replaced in Replace All (Exact/Equivalent)."
+        }
+      }
+    },
+    "keybindings": [
+      {
+        "command": "hexmate.toggleDecorations",
+        "key": "ctrl+alt+d",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "hexmate.toggleNumberFormat",
+        "key": "ctrl+alt+n",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "npm run compile && node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "tslint": "^6.1.3",
+    "vscode-test": "^1.7.0"
+  }
+}
