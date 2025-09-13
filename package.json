@@ -1,7 +1,7 @@
 {
-  "name": "hexmate",
+  "name": "hex-mate",
   "displayName": "HexMate",
-  "publisher": "bitlogiclab",
+  "publisher": "BitLogicLab",
   "description": "Number Conversion & Bitfield Tools for VS Code",
   "version": "1.0.0",
   "engines": {
