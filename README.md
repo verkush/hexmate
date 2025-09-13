@@ -3,7 +3,7 @@
 > 🔢 Convert numbers between Decimal, Hex, Binary, and Octal right inside your code editor.  
 > ⚡ Minimalist hover UI, inline previews, one-click replace, copy, and more.
 
-![HexMate Banner](media/banner.png)
+![HexMate Banner](https://raw.githubusercontent.com/verkush/hexmate/refs/heads/master/media/banner.png)
 
 ---
 
@@ -41,19 +41,19 @@
 
 ### Hover Conversion
 *(Placeholder: insert GIF here)*  
-![Hover Demo](media/hover.gif)
+![Hover Demo](https://raw.githubusercontent.com/verkush/hexmate/refs/heads/master/media/hover.gif)
 
 ---
 
 ### Replace All (Exact vs Equivalent)
 *(Placeholder: insert GIF here)*  
-![Replace All Demo](media/replaceAll.gif)
+![Replace All Demo](https://raw.githubusercontent.com/verkush/hexmate/refs/heads/master/media/replaceAll.gif)
 
 ---
 
 ### Inline Decorations Toggle
 *(Placeholder: insert GIF here)*  
-![Decorations Toggle](media/decoration.gif)
+![Decorations Toggle](https://raw.githubusercontent.com/verkush/hexmate/refs/heads/master/media/decoration.gif)
 
 ---
 
